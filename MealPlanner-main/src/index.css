@@ -1,0 +1,98 @@
+body {
+  font-family: "Arial", sans-serif;
+  background: #121212; /* Dark background */
+  color: #ffffff; /* White text */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+h2, h3 {
+  color: #ff8c00; /* Orange headings */
+}
+
+.tools {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;  /* Reduced gap */
+  flex-wrap: wrap;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.1);
+  width: 32%; /* Increased width */
+  min-width: 220px; /* Adjusted for responsiveness */
+  text-align: center;
+}
+
+select, input, button {
+  width: 90%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #e07f11;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+select::placeholder, input::placeholder {
+  color: rgba(234, 151, 9, 0.7);
+}
+
+button {
+  background-color: #f8f6f3;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #cc7000;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: 0.3s;
+  color: rgb(235, 131, 12);
+}
+
+.animated-item {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
