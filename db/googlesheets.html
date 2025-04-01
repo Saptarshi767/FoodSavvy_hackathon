@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message Saptarshi</title>
+  <link rel="icon" type="image/png" href="D:\FoodSavvy\FoodSavvy-master\FoodSavvy-master\favicon.ico">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+    form {
+      max-width: 400px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    input[type="text"], button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #007bff;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align: center;">REGISTER RIGHT NOW!</h1>
+  <form method="post" id="sheetdb-form"
+  action="https://sheetdb.io/api/v1/rk5sna88ks9jp">
+    Name: <input type="text" name="data[name]">
+    Email: <input type="text" name="data[email]">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    var form = document.getElementById('sheetdb-form');
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      fetch(form.action, {
+          method : "POST",
+          body: new FormData(document.getElementById("sheetdb-form")),
+      }).then(
+          response => response.json()
+      ).then((html) => {
+        
+        alert('success')
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meal Planner</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #1d1d1d;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #252525;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  h2, h3 {
+    text-align: center;
+    color: #ff8c00;
+    margin-bottom: 20px;
+  }
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  select, input[type="number"], input[type="text"], button {
+    display: block;
+    margin-bottom: 15px;
+    width: calc(100% - 30px);
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    background-color: #333;
+    color: #fff;
+  }
+  select:focus, input[type="number"]:focus, input[type="text"]:focus, button:focus {
+    border-color: #ff8c00;
+  }
+  button {
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #cc7000;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    background-color: #404040;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  li:last-child {
+    margin-bottom: 0;
+  }
+  .recommendation {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .tools {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .tools div {
+    width: calc(33.33% - 10px);
+  }
+</style>
+<link rel="icon" type="image/png" href="D:\FoodSavvy\FoodSavvy-master\FoodSavvy-master\favicon.ico">
+</head>
+<body>
+<div class="container">
+  <h2>Meal Planner</h2>
+  <div class="tools">
+    <div>
+      <h3>Add Meal</h3>
+      <label for="day">Select Day:</label>
+      <select id="day">
+        <option value="monday">Monday</option>
+        <option value="tuesday">Tuesday</option>
+        <option value="wednesday">Wednesday</option>
+        <option value="thursday">Thursday</option>
+        <option value="friday">Friday</option>
+        <option value="saturday">Saturday</option>
+        <option value="sunday">Sunday</option>
+      </select>
+      <label for="meal">Select Meal:</label>
+      <select id="meal">
+        <option value="breakfast">Breakfast</option>
+        <option value="lunch">Lunch</option>
+        <option value="dinner">Dinner</option>
+      </select>
+      <button onclick="addMeal()">Add Meal</button>
+    </div>
+    <div>
+      <h3>Calorie Calculator</h3>
+      <label for="calories">Enter Calories:</label>
+      <input type="number" id="calories" placeholder="Calories">
+      <button onclick="calculateCalories()">Calculate</button>
+      <p id="calorie-result"></p>
+    </div>
+    <div>
+      <h3>Grocery List</h3>
+      <label for="grocery">Enter Grocery Item:</label>
+      <input type="text" id="grocery" placeholder="Item">
+      <button onclick="addGrocery()">Add Item</button>
+      <ul id="grocery-list"></ul>
+    </div>
+  </div>
+  <h3>Meal Plan</h3>
+  <ul id="meal-list"></ul>
+</div>
+
+<script>
+  function addMeal() {
+    var day = document.getElementById("day").value;
+    var meal = document.getElementById("meal").value;
+    var mealList = document.getElementById("meal-list");
+
+    var listItem = document.createElement("li");
+    listItem.textContent = day + " - " + meal;
+
+    mealList.appendChild(listItem);
+
+    setTimeout(function() {
+      listItem.style.opacity = 1;
+      listItem.style.transform = "translateY(0)";
+    }, 100);
+  }
+
+  function calculateCalories() {
+    var calories = document.getElementById("calories").value;
+    var result = document.getElementById("calorie-result");
+
+    if (!calories || isNaN(calories)) {
+      result.textContent = "Please enter a valid number.";
+    } else {
+      result.textContent = "You need to consume approximately " + (calories / 3) + " meals per day.";
+    }
+  }
+
+  function addGrocery() {
+    var item = document.getElementById("grocery").value;
+    var groceryList = document.getElementById("grocery-list");
+
+    var listItem = document.createElement("li");
+    listItem.textContent = item;
+
+    groceryList.appendChild(listItem);
+  }
+</script>
+</body>
+</html>

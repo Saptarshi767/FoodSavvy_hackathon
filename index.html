@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodSavvy | GSAP-Powered</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<style>
+    /* Styling for sliding effect */
+    .scroll-slide-right {
+        transform: translateX(-100px);
+        opacity: 0;
+        transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+    }
+
+    .scroll-slide-right.active {
+        transform: translateX(0);
+        opacity: 1;
+    }
+</style>
+
+<script>
+    document.addEventListener("scroll", function () {
+        const element = document.querySelector(".scroll-slide-right");
+        const position = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (position < windowHeight - 100) {
+            element.classList.add("active");
+        } else {
+            element.classList.remove("active");
+        }
+    });
+</script>
+
+<body>
+    <div id="main">
+        <div id="menu-full-srn">
+            <!-- menu button  -->
+            <h1>MENU</h1>
+            <div id="menu-left">
+                 <h3><a href="https://food-ten-blond.vercel.app/">Scan Image</a></h3>
+                <h3><a href="chatbot/index.html">SAM-AI</a></h3>
+                <h3><a href="recepies/index1.html">Cooking Tips</a></h3>
+                <h3><a href="image upload/example/index.html">Upload Image</a></h3>
+               <a href="https://meal-planner-black.vercel.app/"><h3>Meal Planning Tools</h3></a>
+
+            </div>
+            
+            <div id="menu-right">
+                <a href="about.html">
+                    <h3>About</h3>
+                </a>
+                <a href="faqs.html">
+                    <h3>FAQs</h3>
+                </a>
+                <a href="contacts.html">
+                    <h3>Contacts</h3>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- Menu cart  -->
+        <div class="cart-menu">
+            <div id="cartPrim">
+                <h1>Your cart is empty.</h1>
+                <button id="cartBtn">Health/Wealth</button>
+            </div>
+            <div class="cart-slider-box">
+                <div class="cart-slider">
+                    <span>CART</span>
+                    <span>CART</span>
+                    <span>CART</span>
+                    <span>CART</span>
+                    <span>CART</span>
+                    <span>CART</span>
+                </div>
+                <div class="cart-slider">
+                    <span>CART</span>
+                    <span>CART</span>
+                    <span>CART</span>
+                    <span>CART</span>
+                    <span>CART</span>
+                    <span>CART</span>
+                </div>
+            </div>
+            <div class="empty-slider-box">
+                <div class="empty-slider">
+                    <span>EMPTY</span>
+                    <span>EMPTY</span>
+                    <span>EMPTY</span>
+                    <span>EMPTY</span>
+                    <span>EMPTY</span>
+                    <span>EMPTY</span>
+                </div>
+                <div class="empty-slider">
+                    <span>EMPTY</span>
+                    <span>EMPTY</span>
+                    <span>EMPTY</span>
+                    <span>EMPTY</span>
+                    <span>EMPTY</span>
+                    <span>EMPTY</span>
+                </div>
+            </div>
+        </div>
+        <div id="nav">
+            <h2>FoodSavvy</h2>
+            <div id="nav-part2">
+                <h3>My Cart</h3>
+                <div id="toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <!-- 1234 image card sliding -->
+
+        <div id="page1">
+            <h1>FoodSavvy</h1>
+            <span>
+                Fuel Your Journey with FoodSavvy: Nourishing Minds, One Bite at a Time.</span>
+            <h2>
+                PURE CRUNCH
+                ESSENCE CRUNCH
+                CRUNCH SUPREME
+            </h2>
+        </div>
+        <div id="page2">
+            <div><img src="large-set-isolated-vegetables-white-background.png" alt="" style="width: 100%; height: 30%;"></div>
+            <img src="gku.gif" alt="" style="width: 200px; height: auto;">
+            <h3> Rediscovering Nature's Beauty: </h3>
+            <h3> A Cornucopia of Healthful Fruits and </h3>
+            <h3><span>Vegetables, Bursting with Flavor..</span></h3>
+
+        </div>
+        
+        
+        <div id="page3">
+            <h3>Our Best Selling Products</h3>
+            <div id="line">
+            </div>
+            <div class="fruit" id="mango">
+                <div class="card mangocard">
+                    <h2>FoodSavvy <br>01</h2>
+                    <h3>ingredients: Grilled Vegetable Medley</h3>
+                </div>
+                <h5>01</h5>
+                <h1 class="fruitname">Seasonal Delight</h1>
+            </div>
+            <div class="fruit" id="Banana">
+                <div class="card bananacard">
+                    <h2>FoodSavvy <br>02</h2>
+                    <h3>ingredients: Avocado Mango Salad</h3>
+                </div>
+                <h5>02</h5>
+                <h1 class="fruitname">Fresh Fusion</h1>
+            </div>
+            <div class="fruit" id="PineApple">
+                <h5>03</h5>
+                <div class="card pinecard">
+                    <h2>FoodSavvy <br>03</h2>
+                    <h3>ingredients: Berry Blast Smoothie</h3>
+                </div>
+                <h1 class="fruitname">Smoothie Sensation</h1>
+            </div>
+            <div class="fruit" id="Pithaya">
+                <h5>04</h5>
+                <div class="card pithayacard">
+                    <h2>FoodSavvy <br>04</h2>
+                    <h3>ingredients: Citrus Quinoa Salad</h3>
+                </div>
+                <h1 class="fruitname">Zesty Zinga</h1>
+            </div>
+            <div class="fruit" id="Variety">
+                <h5>05</h5>
+                <h1 class="fruitname">Variety</h1>
+            </div>
+        </div>
+        <div id="page4">
+            <h1 class="pg4-prim">I FINISHED THE</h1>
+            <h1 class="pg4-prim"> PLATE & REVEL</h1>
+            <h1 class="pg4-prim" id="pg4-h1-3"> SATISFACTION.
+            </h1>
+            </h1>
+            <div id="page4-2box">
+                <div id="page4-b1">
+                    <h1>SO SATISFYING, <br>
+                        IT SILENCES EVEN THE HUNGER PANGS.</h1>
+                </div>
+                <div id="page4-b2">
+                    <h1>THIS IS WHAT "Daily <br>
+                        Meals" SHOULD HAVE <br>
+                        ALWAYS BEEN</h1>
+                </div>
+            </div>
+
+        </div>
+        <div id="page5">
+            <div id="cursor"></div>
+            <div id="page5-ele1">
+                <h1>Guilt-Free satisfaction for</h1> <span>every occasion</span>
+            </div>
+            <div id="page5-ele2">
+                <h3>Yes, you can savor FoodSavvy anywhere, even in zero gravity. Now, the only challenge is reaching for
+                    the stars.</h3>
+            </div>
+            <div id="smiley">
+                <img src="https://uploads-ssl.webflow.com/61defec4a021d8fe954c11bd/61defec4a021d87fb04c11fc_smiley.svg"
+                    alt="">
+            </div>
+        </div>
+        <div id="page6">
+            <div class="slide-h1">
+                <h1><span class="one1">SAVVY</span>
+                    <span class="one2">SAVVY</span>
+                    <span class="one1">SAVVY</span>
+                    <span class="one2">SAVVY</span>
+                    <span class="one1">SAVVY</span>
+                    <span class="one2">SAVVY</span>
+                    <span class="one1">SAVVY</span>
+                    <span class="one2">SAVVY</span>
+                    <span class="one1">SAVVY</span>
+                    <span class="one2">SAVVY</span>
+                </h1>
+            </div>
+            <div class="slide-h2">
+                <h1><span class="one1">SAVVY</span>
+                    <span class="one2">SAVVY</span>
+                    <span class="one1">SAVVY</span>
+                    <span class="one2">SAVVY</span>
+                    <span class="one1">SAVVY</span>
+                    <span class="one2">SAVVY</span>
+                    <span class="one1">SAVVY</span>
+                    <span class="one2">SAVVY</span>
+                    <span class="one1">SAVVY</span>
+                    <span class="one2">SAVVY</span>
+                </h1>
+            </div>
+            <div class="slide-h1">
+                <h1><span class="one1">SAVVY</span>
+                    <span class="one2">SAVVY</span>
+                    <span class="one1">SAVVY</span>
+                    <span class="one2">SAVVY</span>
+                    <span class="one1">SAVVY</span>
+                    <span class="one2">SAVVY</span>
+                    <span class="one1">SAVVY</span>
+                    <span class="one2">SAVVY</span>
+                    <span class="one1">SAVVY</span>
+                    <span class="one2">SAVVY</span>
+                </h1>
+            </div>
+            <div class="slide-h2">
+                <h1><span class="one1">SAVVY</span>
+                    <span class="one2">SAVVY</span>
+                    <span class="one1">SAVVY</span>
+                    <span class="one2">SAVVY</span>
+                    <span class="one1">SAVVY</span>
+                    <span class="one2">SAVVY</span>
+                    <span class="one1">SAVVY</span>
+                    <span class="one2">SAVVY</span>
+                    <span class="one1">SAVVY</span>
+                    <span class="one2">SAVVY</span>
+                </h1>
+            </div>
+            <div class="slide-h1">
+                <h1><span class="one1">SAVVY</span>
+                    <span class="one2">SAVVY</span>
+                    <span class="one1">SAVVY</span>
+                    <span class="one2">SAVVY</span>
+                    <span class="one1">SAVVY</span>
+                    <span class="one2">SAVVY</span>
+                    <span class="one1">SAVVY</span>
+                    <span class="one2">SAVVY</span>
+                    <span class="one1">SAVVY</span>
+                    <span class="one2">SAVVY</span>
+                </h1>
+            </div>
+        </div>
+        <div id="page7">
+
+            <div id="page7-qn">
+                <h1>Is your everyday meal</h1>
+                <br>
+                <span>healthy and tasty at the sametime?</span>
+            </div>
+            <div id="pg7-ans">
+                <div id="pg7-yes">
+                    <h1>Yes</h1>
+                    <img src="https://cdn.dribbble.com/users/372743/screenshots/5999764/attachments/1289470/a4dc8c51661577.58f63a7bb287b.gif"
+                        alt="">
+                    <!-- <img src="https://uploads-ssl.webflow.com/61defec4a021d8fe954c11bd/61defec4a021d8f4394c120b_bananas.gif"
+                    alt=""> -->
+                </div>
+                <div id="pg7-no">
+                    <h1>No</h1>
+                    <!-- <img src="https://media.giphy.com/media/AUPVrSBUoIzW8/giphy.gif" alt=""> -->
+                    <img src="https://uploads-ssl.webflow.com/61defec4a021d8fe954c11bd/61defec4a021d87bfc4c1204_syrup.gif"
+                        alt="">
+                </div>
+            </div>
+        </div>
+        <!-- GSAP boxes  -->
+        <div id="page8">
+            <h1>Now Snack Better</h1>
+            <div id="pg8-imgBox">
+                <img src="https://uploads-ssl.webflow.com/61defec4a021d8fe954c11bd/61defec4a021d848674c1222_01_transparent.png"
+                    alt="">
+                <img src="https://uploads-ssl.webflow.com/61defec4a021d8fe954c11bd/61defec4a021d863d94c1221_02_transparent.png"
+                    alt="">
+                <img src="https://uploads-ssl.webflow.com/61defec4a021d8fe954c11bd/61defec4a021d823654c1219_03_transparent.png"
+                    alt="">
+                <img src="https://uploads-ssl.webflow.com/61defec4a021d8fe954c11bd/61defec4a021d84f0b4c121f_04_transparent.png"
+                    alt="">
+                <img src="https://uploads-ssl.webflow.com/61defec4a021d8fe954c11bd/61defec4a021d87bcc4c1220_05_transparent.png"
+                    alt="">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="index.js"></script>
+<script>
+    window.addEventListener("scroll", function() {
+    let navbar = document.getElementById("nav");
+    if (window.scrollY > 50) { 
+        navbar.classList.add("scrolled"); 
+    } else { 
+        navbar.classList.remove("scrolled"); 
+    }
+});
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="shortcut icon" href="images/cheese-burger.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Cooking Recepies </title>
+</head>
+<style>
+
+#enlarge-on-hover {
+  transition: transform 0.3s ease;
+}
+
+#enlarge-on-hover:hover {
+  transform: scale(1.2); 
+}
+
+
+</style>
+<body>
+
+    <nav class="navbar target">
+        <a href="#" class="nav-link">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="#" class="nav-link">
+            <i class="fas fa-utensils"></i>
+            <span>Meals</span>
+        </a>
+        <a href="#" class="nav-link">
+            <i class="fas fa-pizza-slice"></i>
+            <span>Pizza</span>
+        </a>
+        <a href="#" class="nav-link">
+            <i class="fas fa-hamburger"></i>
+            <span>Burger</span>
+        </a>
+        <a href="#" class="nav-link">
+            <i class="fas fa-blender-phone"></i>
+            <span>Contact</span>
+        </a>
+    </nav>
+    <div class="menu target"></div>
+
+    <div class="container">
+
+        <section class="section-1">
+            <h1 class="section-heading">
+                Cooking Recepies
+            </h1>
+            <div class="section-1-icons">
+                <i class="fas fa-egg change"></i>
+                <i class="fas fa-stroopwafel"></i>
+                <i class="fas fa-cheese"></i>
+                <i class="fas fa-drumstick-bite"></i>
+                <i class="fas fa-hotdog"></i>
+                <i class="fas fa-apple-alt"></i>
+                <i class="fas fa-ice-cream"></i>
+                <i class="fas fa-fish"></i>
+                <i class="fas fa-cookie"></i>
+                <i class="fas fa-seedling"></i>
+            </div>
+        </section>
+
+        <section class="section-2">
+            <h2 class="section-heading">
+                Meals We Love
+            </h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img class="card-img" src="images/card-img-1.png" alt="fish">
+                    <h3 class="card-name">Fish</h3>
+                    <button class="card-btn">Order Now</button>
+                </div>
+                <div class="card">
+                    <img class="card-img" src="images/card-img-3.png" alt="">
+                    <h3 class="card-name">Lobster</h3>
+                    <button class="card-btn">Order Now</button>
+                </div>
+                <div class="card">
+                    <img class="card-img" src="images/card-img-2.png" alt="">
+                    <h3 class="card-name">Cake</h3>
+                    <button class="card-btn">Order Now</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-3">
+            <h2 class="section-heading">
+                Our Food Gallery
+            </h2>
+            <div class="gallery">
+                <!-- <a class="gallery-link" title="Order Now">
+                    <img class="food-img" src="images/gallery-img-4.jpg">
+                    <h3 class="food-name">Hamburger</h3>
+                    <p class="food-description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque error, velit itaque distinctio numquam nobis.
+                    </p>
+                </a> -->
+                <a class="gallery-link" title="Order Now">
+                    <img class="food-img" src="images/gallery-img-5.jpg">
+                    <h3 class="food-name">Salmon</h3>
+                    <p class="food-description">
+                        Salmon is an oily fish that is high in protein and omega-3 fatty acids.
+                    </p>
+                </a>
+                <a class="gallery-link" title="Order Now">
+                    <img class="food-img" src="images/gallery-img-1.jpg">
+                    <h3 class="food-name">Pancakes</h3>
+                    <p class="food-description">
+                        A pancake is a thin, flat, circular piece of cooked batter made from milk, flour, and eggs. 
+                    </p>
+                </a>
+                <a class="gallery-link" title="Order Now">
+                    <img class="food-img" src="images/gallery-img-2.jpg">
+                    <h3 class="food-name">Cupcakes</h3>
+                    <p class="food-description">
+                        Cupcakes are made with the same ingredients as a regular cake.
+                    </p>
+                </a>
+                <a class="gallery-link" title="Order Now">
+                    <img class="food-img" src="images/gallery-img-3.jpg">
+                    <h3 class="food-name">Hummus</h3>
+                    <p class="food-description">
+                        Hummus is a savory Middle Eastern dip or spread made from mashed chickpeas, tahini, lemon juice, and garlic.
+                    </p>
+                </a>
+                <a class="gallery-link" title="Order Now">
+                    <img class="food-img" src="images/gallery-img-6.jpg">
+                    <h3 class="food-name">Veggies</h3>
+                    <p class="food-description">
+                        A vegetable is the edible portion of a plant.
+                    </p>
+                </a>
+            </div>
+        </section>
+
+        <!-- fourth section -->
+        <section class="section-4">
+            <div class="section-4-text">
+                <h2 class="section-4-heading">START YOUR JOURNEY NOW!</h2>
+                <p class="section-4-p">Get yourself started now | Click on the button below</p>
+                <a href="db/googlesheets.html"><h2 id="enlarge-on-hover" class="section-4-heading">register now!!</h2></a> 
+            </div>
+            <!-- <div>
+              <h1 class="section-4-heading><a href="db/googlesheets.html">GET STARTED</a></h1>  
+            </div> -->
+            <!-- <form class="sign-up" action="https://sheetdb.io/api/v1/rk5sna88ks9jp">
+                <input type="email" class="signup-form-input" placeholder="Enter Your Email">
+                <button type="submit" class="signup-form-btn">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form> -->
+            <p class="copyright">
+                www.siddhant.com | All rights reserved &copy; 2024
+            </p>
+        </section>
+
+    </div>
+    
+    <script src="index1.js"></script>
+</body>
+</html>
